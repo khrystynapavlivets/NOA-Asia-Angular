@@ -1,0 +1,79 @@
+@use '@angular/material' as mat;
+@import 'variables';
+@import 'mixins';
+@import 'font';
+
+$primary-default-value: (
+  50: #FAD4B8,
+  100: #FAD4B8,
+  200: #FAD4B8,
+  300: #EC6603,
+  400: #EC6603,
+  500: #EC6603,
+  600: #EC6603,
+  700: #F3B484,
+  800: #F3B484,
+  900: #F3B484,
+  contrast: (50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white)
+);
+
+$warn-default-value: (
+  50: #EB5757,
+  100: #EB5757,
+  200: #EB5757,
+  300: #EB5757,
+  400: #EB5757,
+  500: #EB5757,
+  600: #EB5757,
+  700: #EB5757,
+  800: #EB5757,
+  900: #EB5757,
+  contrast: (50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white)
+);
+
+@include mat.core();
+
+
+.custom-form-field.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+  stroke: rgb(21, 0, 255); /* Колір контуру при фокусі */
+}
+
+.custom-form-field.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  stroke-width: 2px; /* Товщина контуру при фокусі */
+}
+
+.custom-form-field.mat-form-field-appearance-outline .mat-form-field-ripple {
+  background-color: rgb(0, 200, 255); /* Колір рипла при фокусі */
+}
+
+
+.dialog-back {
+  background-color: rgba(0, 0, 0, 0.701);
+}
+
+.menu-dialog {
+position: absolute;
+
+}
+
+.mat-app-background {
+  background-color: white;
+}

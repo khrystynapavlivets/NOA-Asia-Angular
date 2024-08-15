@@ -1,0 +1,12 @@
+<nav class="menu-dialog-container">
+  <ul class="menu-items">
+    @for (category of categories; track $index) {
+    <li class="menu-item">
+      <a  [routerLink]="['/product/', category.path ]" (click)="closeDialog()">
+        <img [src]="category.imagePath" alt="{{ category.name}}">
+        <p class="menu-item-title">{{ category.name }}</p>
+      </a>
+    </li>
+    }
+  </ul>
+</nav>

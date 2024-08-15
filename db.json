@@ -1,0 +1,354 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "сніданки",
+      "path": "snidanky",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fsyrnyky-z-yagodamy-snidanky.jpg?alt=media&token=79be3c15-2358-4922-a3b4-ab2f8136357a"
+    },
+    {
+      "id": "d696",
+      "name": "стартери",
+      "path": "starters",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fkajso_z_gorihovym_sousom_startery.jpg?alt=media&token=31b1c06c-3d5c-419c-92c6-7267512117ad"
+    },
+    {
+      "id": "d79b",
+      "name": "рамен",
+      "path": "ramen",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Ftom-yam-z-moreproduktamy-rameny.jpg?alt=media&token=86a0cea0-e871-4130-aa2f-56550a7d5d84"
+    },
+    {
+      "id": "6489",
+      "name": "asian wok",
+      "path": "asianwok",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fpadtaj_z_kurkoyu_ta_krevetkamy_vok.jpg?alt=media&token=331ab33b-372b-4f5a-a817-844caaa716c7"
+    },
+    {
+      "id": "6346",
+      "name": "asian poke",
+      "path": "asian-poke",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fvega-grin-glovo.jpg?alt=media&token=712d79ec-abf8-4e6b-afce-effcb5f396dd"
+    },
+    {
+      "id": "12ad",
+      "name": "суші-бургери",
+      "path": "sushi-burgery",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fsalmon-sushi-burger-sushi-burgery.jpg?alt=media&token=48ef2abf-4464-469b-ba55-70770e98cceb"
+    },
+    {
+      "id": "8086",
+      "name": "роли",
+      "path": "rolls",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Frol-salmon-lajt-roly.jpg?alt=media&token=986361fe-c9ff-47c8-bece-36308ad8b551"
+    },
+    {
+      "id": "9968",
+      "name": "сети",
+      "path": "sushiset",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fkombo-sajt-eksp.jpg?alt=media&token=e3e24d7c-6569-40ad-9a35-94f5781ece62"
+    },
+    {
+      "id": "6ae8",
+      "name": "десерти",
+      "path": "deserty",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fbaskskyj-chizkejk-deserty.jpg?alt=media&token=34378d32-3518-4646-922f-3686da3debdc"
+    },
+    {
+      "id": "805f",
+      "name": "напої",
+      "path": "napoyi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Flymonad-blackberry-napoyi.jpg?alt=media&token=0baa4653-7be0-440b-b22b-5615cd90e184"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "category": {
+        "id": "1",
+        "name": "сніданки",
+        "path": "snidanky",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fsyrnyky-z-yagodamy-snidanky.jpg?alt=media&token=79be3c15-2358-4922-a3b4-ab2f8136357a"
+      },
+      "name": "Кацу – сандо з тунцем",
+      "path": "kaczu-sando-z-tunczem",
+      "description": "Смажена булочка бріош на вершковому маслі, з тунцем, хрумким огірком, халапеньо та сиром чеддер *Містить алергени: глютен, продукти з риби, молоковмісні продукти",
+      "weight": "220",
+      "price": 179,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fkaczu-sando-z-tunczem-sajt-eksp-426x320.webp?alt=media&token=f5073020-edc3-4179-82c1-c0ac10be1e2c",
+      "count": 1
+    },
+    {
+      "id": "2",
+      "category": {
+        "id": "d696",
+        "name": "стартери",
+        "path": "starters",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fkajso_z_gorihovym_sousom_startery.jpg?alt=media&token=31b1c06c-3d5c-419c-92c6-7267512117ad"
+      },
+      "name": "Бао з креветками 🌶",
+      "path": "bao-z-krevetkoyu-2-sht",
+      "description": "Булочки парові, креветки тигрові, топінг пад тай, салат айсберг, огірок, кунжут білий, ікра корюшки, перець чилі, мікрогрін / 2 шт   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   *Містить алергени: борошно пшеничне, молоко, гірчиця, арахіс, продукти з риби та ракоподібних, кунжут.",
+      "weight": "245",
+      "price": 229,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fbao-z-krevetkamy-sajt-eksp-426x320.webp?alt=media&token=b1feeebb-14f4-4465-8134-438b97388ead",
+      "count": 1
+    },
+    {
+      "id": "3",
+      "category": {
+        "id": "1",
+        "name": "сніданки",
+        "path": "snidanky",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fsyrnyky-z-yagodamy-snidanky.jpg?alt=media&token=79be3c15-2358-4922-a3b4-ab2f8136357a"
+      },
+      "name": "Окономіякі з рваною свининою",
+      "path": "okonomiyaki-z-rvanoyu-svynynoyu",
+      "description": "Традиційна страва японської кухні, нагадує омлет посипаний рваною свининою, пекінською капустою, соусом унагі, майо та стружкою тунця *Містить алергени: продукти з яєць, продукти з риби, глютен, соя, гірчиця",
+      "weight": "270",
+      "price": 164,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fokonomiyaki_z_rvanoyu_svynynoyu_sajt_eksp-426x320.webp?alt=media&token=7f16381a-e964-407c-bb64-42ab518a5030",
+      "count": 1
+    },
+    {
+      "id": "4",
+      "category": {
+        "id": "1",
+        "name": "сніданки",
+        "path": "snidanky",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fsyrnyky-z-yagodamy-snidanky.jpg?alt=media&token=79be3c15-2358-4922-a3b4-ab2f8136357a"
+      },
+      "name": "Аво тост з лососем",
+      "path": "avo-tost-z-lososem",
+      "description": "Булочка бріош з крем сиром, авокадо, скремблом, обпаленим лососем, сирним соусом, салатним міксом та фурікаке *Містить алергени: молоковмісні продукти, риба, глютен, кунжут, продукти з яєць",
+      "weight": "350",
+      "price": 314,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Favo-tost-z-lososem-sajt-eksp-426x320.webp?alt=media&token=bc7bbca9-ae76-4faf-9237-7be9b165f274",
+      "count": 1
+    },
+    {
+      "id": "5",
+      "category": {
+        "id": "d696",
+        "name": "стартери",
+        "path": "starters",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fkajso_z_gorihovym_sousom_startery.jpg?alt=media&token=31b1c06c-3d5c-419c-92c6-7267512117ad"
+      },
+      "name": "Креветки у соусі васабі",
+      "path": "krevetky-tygrovi-u-sousi-vasabi",
+      "description": "Креветки, соус васабі, мигдальні пластівці, лайм, паприка шматочками, сітка з борошна   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ *Містить алергени: креветки, яєчний порошок, гірчиця, мигдаль, борошно пшеничне",
+      "weight": "200",
+      "price": 279,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fkrevetky-tygrovi-v-sousi-vasabi-sajt-eksp-426x320.webp?alt=media&token=4b0f75bf-75a1-4162-866f-ef646e9ff8f3",
+      "count": 1
+    },
+    {
+      "id": "6",
+      "category": {
+        "id": "d696",
+        "name": "стартери",
+        "path": "starters",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fkajso_z_gorihovym_sousom_startery.jpg?alt=media&token=31b1c06c-3d5c-419c-92c6-7267512117ad"
+      },
+      "name": "Бао з куркою 🌶",
+      "path": "bao-z-kurkoyu-2-sht",
+      "description": "Булочки парові, курка, топінг пад тай, салат айсберг, огірок, насіння кунжуту, ікра корюшки, перець чилі   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀*Містить алергени: борошно пшеничне, молоко, продукти з риби, гірчиця, арахіс, кунжут, соя.",
+      "weight": "250",
+      "price": 159,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fbao-z-kurkoyu-sajt-eksp-426x320.webp?alt=media&token=1a6a1182-c044-4b27-b74b-73081fab1e29",
+      "count": 1
+    },
+    {
+      "id": "7",
+      "category": {
+        "id": "d79b",
+        "name": "рамен",
+        "path": "ramen",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Ftom-yam-z-moreproduktamy-rameny.jpg?alt=media&token=86a0cea0-e871-4130-aa2f-56550a7d5d84"
+      },
+      "name": "Том ям з морепродуктами 🌶🌶",
+      "path": "tom-yam-z-moreproduktamy",
+      "description": "Бульйон Том ям з кокосовим молоком, креветки тигрові, лосось, мідії, кальмар, гливи, чері, лайм, кінза, фурікаке. Подається з рисом.   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ *Містить алергени: молоковмісні продукти, соя, кунжут, продукти з риби та молюсків.",
+      "weight": "569",
+      "price": 359,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Ftom-yam-exp-site-426x320.webp?alt=media&token=2a2195fb-d9ce-4a83-9844-614fab220eeb",
+      "count": 1
+    },
+    {
+      "id": "8",
+      "category": {
+        "id": "6489",
+        "name": "asian wok",
+        "path": "asianwok",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fpadtaj_z_kurkoyu_ta_krevetkamy_vok.jpg?alt=media&token=331ab33b-372b-4f5a-a817-844caaa716c7"
+      },
+      "name": "Удон з тигровою креветкою Wok 🌶",
+      "path": "udon-z-tygrovoyu-krevetkoyu-wok",
+      "description": "Локшина, тигрові креветки, овочі, азійський гриб, салатний мікс (сезонний мікс), цибуля, чилі, насіння кунжуту, горіховий соус   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀*Містить алергени: борошно пшеничне, яєчний продукт, продукти з молюсків, молоковмісні продукти, горіх кеш’ю, кунжут, креветка.",
+      "weight": "510",
+      "price": 309,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fudon-z-tygrovoyu-krevetkoyu-vok-426x426.webp?alt=media&token=4ab45eb7-40ec-41d6-9b66-069cf9a092b8",
+      "count": 1
+    },
+    {
+      "id": "9",
+      "category": {
+        "id": "6346",
+        "name": "asian poke",
+        "path": "asian-poke",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fvega-grin-glovo.jpg?alt=media&token=712d79ec-abf8-4e6b-afce-effcb5f396dd"
+      },
+      "name": "Поке Аво Шрімп",
+      "path": "poke-avo-shrimp",
+      "description": "Поке з креветкою, манго, помідорами чері, авокадо, смаженими чіпсами норі, салатом маш. Поливається грибним соусом із трюфельною пастою із додаванням вершкового масла, часнику, майо, кім-чі та солодкої паприки.     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ *Містить алергени: продукти з ракоподібних, молоковмісні продукти, гірчиця, глютен",
+      "weight": "490",
+      "price": 319,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fpoke-avo-shrimp-426x320.webp?alt=media&token=aff1924d-46c3-4830-ad3a-d7257c9d5048",
+      "count": 1
+    },
+    {
+      "id": "10",
+      "category": {
+        "id": "12ad",
+        "name": "суші-бургери",
+        "path": "sushi-burgery",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fsalmon-sushi-burger-sushi-burgery.jpg?alt=media&token=48ef2abf-4464-469b-ba55-70770e98cceb"
+      },
+      "name": "Салмон Суші-бургер",
+      "path": "salmon-sushi-burger",
+      "description": "Рис, лосось, суші-сир, дайкон, ікра лососева, соус Унагі, норі, огірок, панко, начос, гострий майо   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    *Містить алергени: соя, порошок яєчний, продукти з риби, борошно пшеничне.",
+      "weight": "350",
+      "price": 349,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fsalmon_sushi_burger_sajt_ekspirenza-426x320.webp?alt=media&token=c6f4da22-6265-4c85-8996-4d482defc803",
+      "count": 1
+    },
+    {
+      "id": "11",
+      "category": {
+        "id": "8086",
+        "name": "роли",
+        "path": "rolls",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Frol-salmon-lajt-roly.jpg?alt=media&token=986361fe-c9ff-47c8-bece-36308ad8b551"
+      },
+      "name": "Роял крабс з вугрем",
+      "path": "royal-krabs-z-vugrem",
+      "description": "Вугор, креветка тигрова, сніжний краб, суші-сир, олія трюфельна, рис для суші, водорості норі, майонез японський гострий, сухарі панірувальні, шишамі тагараши, соус унагі, огірок, імбир рожевий, кляр, цибуля зелена, васабі   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀*Містить алергени: креветка , молоковмісні продукти, продукти з риби та ракоподібні, борошно пшеничне, кунжут, продукти з яєць , соя",
+      "weight": "345",
+      "price": 419,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Froyal-krabs-z-vugrem-sajt-eksp-426x320.webp?alt=media&token=588c58d5-f395-4219-bfae-e64fc371af83",
+      "count": 1
+    },
+    {
+      "id": "12",
+      "category": {
+        "id": "9968",
+        "name": "сети",
+        "path": "sushiset",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fkombo-sajt-eksp.jpg?alt=media&token=e3e24d7c-6569-40ad-9a35-94f5781ece62"
+      },
+      "name": "Янай",
+      "path": "yanaj",
+      "description": "Татакі Туна Рол, Рол з копченим лососем, Ебі Пармеджано, Дабл фіш 2.0 + 3 безкоштовних пепсі",
+      "weight": "1325",
+      "price": 1391,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fyanaj-sajt-eksp-426x320.webp?alt=media&token=312e70ff-45db-4087-bda1-c342761f0b1e",
+      "count": 1
+    },
+    {
+      "id": "13",
+      "category": {
+        "id": "6ae8",
+        "name": "десерти",
+        "path": "deserty",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fbaskskyj-chizkejk-deserty.jpg?alt=media&token=34378d32-3518-4646-922f-3686da3debdc"
+      },
+      "name": "Моті вишня з шоколадними дропсами",
+      "path": "moti-vyshnya-z-shokoladnymy-dropsamy",
+      "description": " ",
+      "weight": "75",
+      "price": 104,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fmoti-vyshnya-z-shokoladnymy-dropsamy-exp-site-426x320.webp?alt=media&token=62eaca94-ce03-4018-8859-0a178b6cfccc",
+      "count": 1
+    },
+    {
+      "id": "14",
+      "category": {
+        "id": "805f",
+        "name": "напої",
+        "path": "napoyi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Flymonad-blackberry-napoyi.jpg?alt=media&token=0baa4653-7be0-440b-b22b-5615cd90e184"
+      },
+      "name": "лимонад Сherry Vanilla",
+      "path": "lymonad-sherry-vanilla",
+      "description": "Натуральний лимонад вишня кориця ваніль з вишнею мароскіна",
+      "weight": "300",
+      "price": 129,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Flymonad-sherry-vanilla-426x320.webp?alt=media&token=8b3a1004-a4fc-44d4-a746-cedc2bb50610",
+      "count": 1
+    },
+    {
+      "id": "15",
+      "category": {
+        "id": "d696",
+        "name": "стартери",
+        "path": "starters",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fkajso_z_gorihovym_sousom_startery.jpg?alt=media&token=31b1c06c-3d5c-419c-92c6-7267512117ad"
+      },
+      "name": "Неми з креветкою 🌶️",
+      "path": "nemy-z-krevetkoyu",
+      "description": "Неми (креветки, свинина), соус тайський",
+      "weight": "250",
+      "price": 169,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fnemy-16h12-426x320.webp?alt=media&token=92d45c88-8a47-4710-9fec-4a63ff8a4691",
+      "count": 1
+    },
+    {
+      "id": "16",
+      "category": {
+        "id": "1",
+        "name": "сніданки",
+        "path": "snidanky",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fsyrnyky-z-yagodamy-snidanky.jpg?alt=media&token=79be3c15-2358-4922-a3b4-ab2f8136357a"
+      },
+      "name": "Сирники з ягодами",
+      "path": "syrnyky-z-yagodamy",
+      "description": "Ніжні сирнички з сезонними ягодами, крем сирним соусом та подрібненою фісташкою, молочно гріховим соусом     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n*Містить алергени: молоковмісний продукт, яєчний продукт, горіхи",
+      "weight": "280",
+      "price": 209,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fsyrnyky-ekspirenza-sajt-426x320.webp?alt=media&token=f545e37d-69b8-4cfa-8550-5ea2ba9b9b38",
+      "count": 1
+    },
+    {
+      "id": "17",
+      "category": {
+        "id": "1",
+        "name": "сніданки",
+        "path": "snidanky",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fcategories%2Fsyrnyky-z-yagodamy-snidanky.jpg?alt=media&token=79be3c15-2358-4922-a3b4-ab2f8136357a"
+      },
+      "name": "Омурайсу",
+      "path": "omurajsu",
+      "description": "Омлет, рис, куряче стегно, овочевий мікс, шиїтаке, cоєві паростки, устричний соус, цибуля зелена, кунжут   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀*Містить алергени: яєчний продукт, соя, устричний соус, кунжут, молоко.",
+      "weight": "435",
+      "price": 214,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fproducts%2Fomurajsu-eksp-sajt-426x320.webp?alt=media&token=e4a236ef-38fe-415d-a607-70b204028fde",
+      "count": 1
+    }
+  ],
+  "auth": [
+    {
+      "id": "1",
+      "email": "admin@gmail.com",
+      "password": "qwerty123",
+      "fullName": "Petro Petriv",
+      "role": "ADMIN"
+    },
+    {
+      "id": "2",
+      "email": "user@gmail.com",
+      "password": "qwerty123",
+      "fullName": "Pavlo Pavliv",
+      "role": "USER"
+    }
+  ]
+}

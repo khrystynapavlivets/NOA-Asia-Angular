@@ -1,0 +1,18 @@
+<div class=" admin_panel d-flex flex-column mat-app-background">
+    <div class="nav  nav-pills my-5 ms-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <div class="nav  nav-pills  d-flex flex-column " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link" routerLink="category" routerLinkActive="active"
+                type="button">Категорії</button>
+            <button class="nav-link" routerLink="product" routerLinkActive="active"
+                type="button">Продукти</button>
+            <button class="nav-link" routerLink="order" routerLinkActive="active"
+                type="button">Замовлення</button>
+                <button class="nav-link" routerLink="vacancies" routerLinkActive="active"
+                type="button">Ваканції</button>
+            <button class="btn-out my-3" (click)="logOut()" type="button"><b>ВИХІД</b></button>
+        </div>
+        <div class="tab-content ms-5  ps-5  w-75 d-flex flex-column" id="v-pills-tabContent">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

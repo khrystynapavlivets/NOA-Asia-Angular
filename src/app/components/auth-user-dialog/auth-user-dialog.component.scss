@@ -1,0 +1,167 @@
+@import "../../shared/styles/_base.scss";
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/_variables.scss";
+@import "../../shared/styles/theme-material";
+
+.form {
+    @include flex-row(flex, column, space-around, center);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    min-height: 500px;
+    width: 500px;
+    z-index: 1000;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fbackgrounds%2Fpattern.png?alt=media&token=490b0f6d-cce4-4c96-babb-865f848ded56') repeat;
+        background-size: cover;
+        opacity: 0.05;
+        z-index: -1;
+    }
+
+    .inCabinet {
+        border-radius: 4px;
+        padding: 23px 40px;
+        transition: 0.3s ease-in-out;
+
+        &.enabled {
+            color: $secondary-color;
+            background-color: $accent-color;
+            border: 2px solid $accent-color;
+
+            &:hover {
+                background-color: transparent;
+                color: $accent-color;
+            }
+        }
+
+        &.disabled {
+            background-color: $gray;
+            color: $gray-light;
+        }
+    }
+
+    .open-link {
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+
+        &:hover {
+            text-decoration: none;
+            background-size: 100% 2px;
+        }
+    }
+
+    .open-popup {
+        @extend .open-link;
+    }
+
+    .open-register {
+        @extend .open-link;
+        color: $primary-color;
+    }
+
+    .closeForm {
+        background-color: $accent-color;
+        border: 1px solid $accent-color;
+
+        &:hover {
+            background-color: $secondary-color;
+            color: $accent-color;
+        }
+
+    }
+
+    .material-symbols-outlined {
+        font-size: 34px;
+        margin-top: -5px;
+        margin-left: -14px;
+
+
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+    }
+
+    h2 {
+        width: 100%;
+        font-size: 25px;
+        margin-bottom: 30px;
+        color: $primary-color;
+        text-align: center;
+        font-family: 'Cera Round Pro Bold', sans-serif;
+    }
+
+    .mat-icon {
+        width: 36px;
+        height: 36px;
+
+    }
+
+    .closeForm {
+        margin-left: 80%;
+    }
+
+    span {
+        font-weight: 900;
+    }
+
+    .form-group {
+        width: 400px;
+    }
+
+    .form-group-half {
+        width: 400px;
+    }
+
+    .mat-form-field,
+    .mat-raised-button {
+        width: 100%;
+        height: 60px;
+        margin: 15px 0;
+        font-size: 18px;
+        color: $accent-color;
+        font-weight: 400;
+    }
+
+    .mat-raised-button:disabled {
+        background-color: #d4e6f5;
+    }
+
+    .mat-error {
+        text-align: center;
+    }
+
+    mat-checkbox {
+        margin: 15px 0;
+    }
+
+    mat-checkbox a {
+        text-decoration: none;
+        color: $accent-color;
+        font-weight: 400;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    .visibility {
+        font-size: 24px;
+        color: $primary-color;
+        box-shadow: none; 
+        background: transparent; 
+        position: none;
+        
+    }
+
+    
+}

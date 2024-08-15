@@ -1,0 +1,58 @@
+<div class="container">
+  @if (currentProduct) {
+
+  <ul class="my-3 breadcrumbs d-flex flex-row" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li class="breadcrumb" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a class="mx-1" itemprop="item" routerLink="/">
+        <span itemprop="name">NOA</span>
+      </a>
+    </li>
+    <li class="breadcrumb">
+      <a class="mx-1" itemprop="item" [routerLink]="['/product/'+currentProduct.category.path]">
+        {{currentProduct.category.name | titlecase}}
+      </a>
+    </li>
+    <li class="breadcrumb">
+      <span class="mx-1" itemprop="name">{{currentProduct.name}}</span>
+    </li>
+  </ul>
+
+
+
+  <div class="col-10 my-5 m-auto card border-0">
+    <div class="row gx-5 justify-content-center align-items-center">
+      <div class="col-md-6   my-5 card-image">
+        <img [src]="currentProduct.imagePath" class="img " [alt]="currentProduct.name">
+        <div class="favorite-icon" mat-icon-button (click)="toggleFavorite(currentProduct)">
+          <mat-icon [ngClass]="isFavorite(currentProduct) ? 'fav-btn' : 'fav-btn-outline'">
+            {{ isFavorite(currentProduct) ? 'favorite' : 'favorite_outlined' }}
+          </mat-icon>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-body px-0">
+          <p class="card-text mt-0">{{ currentProduct.weight }} г</p>
+          <h2 class="card-title fs-1 pb-3">{{ currentProduct.name }}</h2>
+          <p class="card-text mt-3 mb-3"> {{ currentProduct.description }}</p>
+          <div class="btn-group d-flex  justify-content-start align-content-center  pt-3">
+            <div class="thumb-input-number" style="display: flex; align-items: center; padding: 1.5px 0">
+              <button (click)="productCount(currentProduct, false)" class="decrement" type="button">-</button>
+              <input class="mx-2 border-0 product-qty" value="1" readonly="" class="product-qty" tabindex="-1" max="99"
+                [value]="currentProduct.count">
+              <button (click)="productCount(currentProduct, true)" type="button" class="increment">+</button>
+            </div>
+            <h4 class="card-title mt-1 ms-5">
+              {{ currentProduct.price * currentProduct.count }} грн
+            </h4>
+          </div>
+          <div class="product-actions d-flex flex-row mt-3">
+            <button class="btn  rounded add-basket-btn  fs-6 me-2" (click)="addToBasket(currentProduct)">Додати в
+              кошик</button>
+            <button class="btn btn-small  rounded quick-order-btn  fs-6">Швидке замовлення</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

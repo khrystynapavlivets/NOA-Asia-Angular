@@ -1,0 +1,220 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/mixins';
+
+
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9990;
+}
+
+.dialog-backdrop-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}
+
+body.dialog-backdrop-blur {
+    overflow: hidden;
+}
+
+.custom-backdrop {
+    background: transparent !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9998;
+
+    .popup {
+        .basket-modal-wraper {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 640px;
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            background-color: $secondary-color;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fbackgrounds%2Fpattern.png?alt=media&token=490b0f6d-cce4-4c96-babb-865f848ded56') repeat;
+                background-size: auto;
+                background-repeat: repeat-y;
+                position: absolute;
+                opacity: 0.05;
+                z-index: -1;
+            }
+
+            .close-dialog {
+                position: absolute;
+                top: -10px;
+                right: 0px;
+                font-size: 20px;
+
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+
+
+            .cart-product {
+                border: 1px solid $gray;
+                margin: 15px;
+                padding: 10px;
+                height: 140px;
+                border-radius: 6px;
+
+                .price_default {
+                    color: $primary-color;
+                    background-color: transparent;
+                }
+
+
+
+            }
+
+            img {
+                width: 150px;
+                height: 90px;
+                object-fit: contain;
+                cursor: pointer;
+                transition: filter 0.3s;
+                margin: 16px 10px;
+
+                &:hover {
+
+                    filter: opacity(70%);
+                }
+            }
+
+            .emptyBasket {
+                color: $primary-color;
+            }
+
+            .toDirectory {
+                @include responsive-font-size(20px);
+
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+
+            .title-basket {
+                width: 200px;
+                height: 30px;
+                cursor: pointer;
+
+                .title {
+                    text-decoration: none;
+                    color: black;
+                    transition: .35s;
+
+                    &:hover {
+                        color: $accent-color;
+                    }
+                }
+            }
+
+            .btn-group {
+                height: 30px;
+                width: 130px;
+
+
+                .product-qty {
+                    width: 50px;
+                    height: 30px;
+                    text-align: center;
+                    border: none;
+                    background-color: transparent;
+
+                }
+
+                .decrement,
+                .increment {
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid $gray;
+                    margin: 1px 3px;
+                    font-size: 30px;
+                    background: none;
+                    -webkit-transition: 0.35s;
+                    transition: 0.35s;
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: $primary-color;
+                    background-color: transparent;
+                    padding: 2px;
+                    border-radius: 6px;
+                }
+            }
+
+            .btn-close {
+                margin-top: 28px;
+                width: 40px;
+
+                &:focus {
+
+                    box-shadow: none;
+                }
+
+            }
+
+
+
+            .cart_bottom {
+                border-top: 2px solid $accent-color;
+                padding: 50px 10px;
+
+                #cart-submit,
+                .btn {
+                    background-color: $accent-color;
+                    color: $secondary-color;
+                    height: 60px;
+                    border: 2px solid $accent-color;
+                    border-radius: 6px;
+                    padding: 18px 30px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 500;
+                    letter-spacing: 0.15em;
+                }
+
+                .cart_price-wrap {
+                    color: $primary-color;
+                    width: 50%;
+                    padding: 20px 50px;
+                    margin-top: auto;
+
+
+                    .card-total-price {
+                        font-family: 'Cera Round Pro Bold', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}

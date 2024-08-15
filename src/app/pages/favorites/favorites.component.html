@@ -1,0 +1,43 @@
+<div class="row product-row mx-3 my-5">
+    <div class="h1 title text-center my-4 ">Улюблене</div>
+    @for( product of favoriteProducts;track $index) {
+    <div class="col-4 mt-3 " style="width: 22rem; height: 29rem">
+        <div class="card mt-3 px-2">
+            <a>
+                <div class="product_image-wrap  mt-5 mb-1">
+                    <img [routerLink]="['/product/'+product.path, product.id ]" [src]="product.imagePath" alt="..." />
+
+                    <div class="favorite-delete" mat-icon-button (click)="removeFromFavorites(product)">
+                        <mat-icon>delete</mat-icon>
+                    </div>
+                </div>
+
+                <div class="product_price h6">
+                    <b class="price"><span>{{ product.price }}</span></b>
+                    <span class="ms-1"> грн</span>
+                </div>
+                <div class="product_title">
+                    <b>{{ product.name }}</b>
+                </div>
+                <div class="product_desc mb-2 mt-1">
+                    <p class="card-text">
+                        {{ product.description | cutText : 105 }}
+                    </p>
+                </div>
+                <div class="product_controls d-flex flex-row justify-content-between align-content-center mt-4 mb-1">
+
+                    <div class="thumb-input-number">
+                        <button type="button" class="decrement">-</button>
+                        <input value="1" readonly="" class="product-qty" tabindex="-1" max="99" />
+                        <button type="button" class="increment">+</button>
+                    </div>
+
+                    <button class="btn btn-small add-to-cart-btn">
+                        Замовити
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    }
+</div>

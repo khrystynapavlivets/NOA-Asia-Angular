@@ -1,0 +1,88 @@
+<header class="header-no-blur">
+  <nav class="navbar navbar-expand-xl w-100">
+    <div class="container-fluid d-flex  w-100">
+      <div class="logo">
+        <a routerLink="/" routerLinkActive="route-active">
+          <img class="logo-noa"
+            src="https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Ficons%2Fxnoa_logo.png.pagespeed.ic.06Ew-Y_JsM.png?alt=media&token=c5af4267-3b50-465e-84a5-fccb6725d823"
+            alt="NOA Logo">
+        </a>
+      </div>
+      <ul class="navbar-nav ms-4">
+        <li class="nav-item me-0">
+          <a (click)="openMenuDialog()" class="nav-link active" aria-current="page">Меню</a>
+        </li>
+      </ul>
+      <div class="d-flex order-xl-2">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fs-1"></span>
+        </button>
+      </div>
+
+
+      <div class="actions d-flex order-lg-2 order-xl-3">
+        <a routerLink="/favorites" routerLinkActive="route-active"><img class="checkout__favorites"
+            src="https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Ficons%2Fheart-regular.svg?alt=media&token=11bb0780-ca62-4de6-8146-eccc2a33dd85"
+            alt=""></a>
+        <a>ENG</a>
+        <img routerLink="/admin" routerLinkActive="route-active" class="login-register-icon nav-link"
+          src="https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Ficons%2Fuser.svg?alt=media&token=7526b870-344d-42b7-8eb0-5df935203cf1"
+          alt="">
+
+
+
+        @if (!isLogin) {
+        <a (click)="openLoginDialog()" class="nav-link" aria-current="page">Вхід | Реєстрація</a>
+        } @if (isLogin) {
+        <a [routerLink]="['/' + loginUrl]" routerLinkActive="route-active" class="nav-link text-dark fw-medium"
+          aria-current="page">
+          {{ loginPage }}
+        </a>
+
+        }
+
+
+
+        <button (click)="openModal()" (click)="openBasketModal()" class="nav-link active" class="checkout"
+          aria-current="page">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Ficons%2Fbasket.svg?alt=media&token=6421d36b-cc17-44b5-8ae1-42e4725f5daa"
+            class="checkout__basket" alt="" />
+          <span class="checkout__count ">{{ count }}</span>
+          <span class="checkout__price "><b>{{ total }}</b></span><span class="checkout__name ">
+            грн</span>
+        </button>
+      </div>
+
+
+
+      <div class="collapse navbar-collapse order-lg-3 order-xl-2 ms-3" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a routerLink="/delivery" routerLinkActive="route-active" class="nav-link">Доставка</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/donatymo" routerLinkActive="route-active" class="nav-link">Донатимо Разом</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/product" routerLinkActive="route-active" class="nav-link">Продукти</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/about" routerLinkActive="route-active" class="nav-link">Про Нас</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/feedback" routerLinkActive="route-active" class="nav-link">Залишити Відгук</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/vacancies" routerLinkActive="route-active" class="nav-link">Вакансії</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact" routerLinkActive="route-active" class="nav-link">Контакти</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+</header>

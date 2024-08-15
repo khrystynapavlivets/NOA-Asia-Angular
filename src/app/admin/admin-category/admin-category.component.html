@@ -1,0 +1,88 @@
+<div class="container-fluid d-flex flex-column">
+    <div>
+        <button class="btnAddCategoryForm fw-bold" type="button" (click)="toggleAddCategoryForm()">
+            ДОДАТИ КАТЕГОРІЮ
+        </button>
+        @if (!addCategoryForm) {
+        <div class="py-3">
+            <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="my-3" style="width: 48%">
+                        <input formControlName="name" name="name" style="height: 3.5rem" type="text"
+                            class="form-control" placeholder="*НАЗВА" required />
+                    </div>
+                    <div class="my-3" style="width: 48%">
+                        <input formControlName="path" style="height: 3.5rem" name="path" type="text"
+                            class="form-control" placeholder="*Шлях" required />
+                        <div class="invalid-feedback">Введіть шлях</div>
+                    </div>
+                </div>
+
+
+                @if (!isUploaded) {
+                <div class="mb-3">
+                    <input class="form-control" type="file" (change)="upload($event)" required />
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="uploadPercent"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                } @if (isUploaded) {
+                <img [src]="valueByControl('imagePath')" width="50px" class="m-3" alt="" />
+                <button type="button" class="btn fw-bold" (click)="deleteImage()">
+                    ВИДАЛИТИ
+                </button>
+                }
+                <button [disabled]="categoryForm.invalid" type="submit"
+                    class="btn fw-bold my-3 w-100 border-0 btnSaveAdd">
+                    {{ editStatus ? "ЗБЕРЕГТИ" : "ДОДАТИ" }}
+                </button>
+            </form>
+        </div>
+        }
+
+        <div class="my-5" style="display: grid; place-items: center; width: 100%">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 10%">№</th>
+                        <th scope="col" style="width: 20%">НАЗВА</th>
+                        <th scope="col" style="width: 40%">ШЛЯХ</th>
+                        <th scope="col" style="width: 20%">КАРТИНКА</th>
+                        <th scope="col" style="width: 20%">ДІЇ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (category of adminCategories; track category.id ) {
+                    <tr>
+                        <td>{{ category?.id }}</td>
+                        <td>
+                            {{ category?.name | cutText:70 }}
+                            <!-- @if(category?.name.length > 70){ -->
+                            <span *ngIf="category.name.length > 70">...</span>
+                            <!-- } -->
+                        </td>
+                        <td class="fw-medium">
+                            {{ category?.path }}
+                        </td>
+                        <td>
+                            <img [src]="category.imagePath" alt="" style="width: 100px;" height="50px" />
+                        </td>
+                        <td>
+                            <button (click)="editCategory(category)" (click)="AddCategoryForm()" type="button"
+                                class="btn btnEdDel fw-bold">
+                                РЕДАГУВАТИ
+                            </button>
+                            <button mat-button [disabled]="editStatus"
+                                [style.cursor]="editStatus ? 'not-allowed' : 'pointer'"
+                                (click)="deleteCategory(category)" type="button" class="btn btnEdDel fw-bold">
+                                ВИДАЛИТИ
+                            </button>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

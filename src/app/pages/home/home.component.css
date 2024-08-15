@@ -1,0 +1,10 @@
+main .video-section {
+  position: relative;
+  height: calc(100vh - 60px);
+}
+main .video-section video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=home.component.css.map */

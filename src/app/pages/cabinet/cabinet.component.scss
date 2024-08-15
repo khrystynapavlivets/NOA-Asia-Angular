@@ -1,0 +1,139 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/mixins";
+
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 800px;
+
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: url(https://noa.ua/wp-content/themes/tomatina/img/pattern.png);
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #1a1a1a;
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    margin: 5px;
+    border-radius: 5px;
+    display: block;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar a.route-active {
+    background-color: $accent-color;
+    color: #fff;
+}
+
+.navbar a:hover {
+    background-color: $accent-color;
+}
+
+.navbar a:active {
+    transform: translateY(5px);
+}
+
+
+// .cabinet {
+//   @extend %container;
+//   @include dispay(flex, space-between, wrap);
+//   &__side {
+//     width: 150px;
+//     @include respond(Medium) {
+//       width: 110px;
+//     }
+//     @include respond(Small) {
+//       width: 100%;
+//       @include dispay(flex, space-between, nowrap);
+//     }
+
+//     &__big {
+//       display: block;
+
+//       @include respond(Small) {
+//         display: none;
+//       }
+//     }
+
+//     &__mobile {
+//       width: calc(100% - 90px);
+//       display: none;
+
+//       @include respond(Small) {
+//         display: flex;
+//         flex-wrap: wrap;
+//       }
+//     }
+//   }
+
+//   &__main {
+//     width: calc(100% - 220px);
+
+//     @include respond(Small) {
+//       width: 100%;
+//     }
+//   }
+
+//   li {
+//     border: 3px solid $lighterGrey;
+//     margin: 10px 0;
+//     text-align: center;
+//     color: $darkGrey;
+//     font-size: 18px;
+//     line-height: 30px;
+//     padding: 15px 0;
+
+//     @include respond(Medium) {
+//       font-size: 16px;
+//     }
+//   }
+//   .route-active {
+//     border: 3px solid $darkTeal;
+//     color: $main;
+//     font-weight: bolder;
+//   }
+
+//   .mat-mdc-raised-button {
+//     margin-top: 15px;
+//     @include respond(Small) {
+//       width: 40px;
+//       height: 35px;
+//       margin-top: 0;
+//     }
+//   }
+// }

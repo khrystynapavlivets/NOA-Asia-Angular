@@ -1,0 +1,60 @@
+@import 'variables';
+
+
+
+// Flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin dispay($display, $justify-content, $wrap) {
+    display: $display;
+    justify-content: $justify-content;
+    flex-wrap: $wrap;
+  }
+// Responsive font size
+@mixin responsive-font-size($size) {
+    font-size: $size;
+
+    @media (max-width: 1200px) {
+        font-size: $size * 0.9;
+    }
+
+    @media (max-width: 992px) {
+        font-size: $size * 0.8;
+    }
+
+    @media (max-width: 768px) {
+        font-size: $size * 0.7;
+    }
+
+    @media (max-width: 576px) {
+        font-size: $size * 0.6;
+    }
+}
+
+
+@mixin box($w, $h){
+    width: $w;
+    height: $h;
+}
+
+@mixin flex-row($d, $f, $j, $a){
+    display: $d;
+    flex-direction: $f;
+    justify-content: $j;
+    align-items: $a;
+}
+
+@mixin text($s, $f, $w){
+    font-size: $s;
+    font-family: $f;
+    font-weight: $w;
+}

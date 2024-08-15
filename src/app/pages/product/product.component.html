@@ -1,0 +1,94 @@
+<div class="card-body my-5">
+    <div class="container m-auto ">
+        <div class="row d-flex flex-row align-content-center justify-content-center ">
+            <ul
+                class="nav nav-pills categories-menu d-flex flex-row align-content-center justify-content-center no-gutters">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/snidanky" routerLinkActive="route-active"
+                        data-id="35">Сніданки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/starters" routerLinkActive="route-active" data-id="20">
+                        Стартери</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/ramen" routerLinkActive="route-active" data-id="21">
+                        Рамен</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/asianwok" routerLinkActive="route-active"
+                        data-id="37">Asian Wok</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/asian-poke" routerLinkActive="route-active"
+                        data-id="38">Asian Poke</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/sushi-burgery" routerLinkActive="route-active"
+                        data-id="52">Суші-бургери</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/rolls" routerLinkActive="route-active"
+                        data-id="15">Роли</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/sushiset" routerLinkActive="route-active"
+                        data-id="24">Сети</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/deserty" routerLinkActive="route-active"
+                        data-id="78">Десерти</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product/napoyi" routerLinkActive="route-active"
+                        data-id="56">Напої</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row product-row mx-3 my-3">
+        @for( product of userProducts;track $index) {
+        <div class="col-4 mt-3 " style="width: 22rem; height: 29rem">
+            <div class="card mt-3 px-2">
+                <a>
+                    <div class="product_image-wrap  mt-5 mb-1">
+                        <img [routerLink]="['/product/'+product.path, product.id ]" [src]="product.imagePath" alt="..." />
+                        <div class="favorite-icon" mat-icon-button (click)="toggleFavorite(product)">
+                            <mat-icon [ngClass]="isFavorite(product) ? 'fav-btn' : 'fav-btn-outline'">
+                                {{ isFavorite(product) ? 'favorite' : 'favorite_outlined' }}
+                            </mat-icon>
+                        </div>
+                    </div>
+
+                    <div class="product_price h6">
+                        <b class="price"><span>{{ product.price }}</span></b>
+                        <span class="ms-1"> грн</span>
+                    </div>
+                    <div class="product_title">
+                        <b>{{ product.name }}</b>
+                    </div>
+                    <div class="product_desc mb-2 mt-1">
+                        <p class="card-text">
+                            {{ product.description | cutText : 105 }}
+                        </p>
+                    </div>
+                    <div
+                        class="product_controls d-flex flex-row justify-content-between align-content-center mt-4 mb-1">
+
+                        <div class="thumb-input-number">
+                            <button type="button" class="decrement">-</button>
+                            <input value="1" readonly="" class="product-qty" tabindex="-1" max="99" />
+                            <button type="button" class="increment">+</button>
+                        </div>
+
+                        <button class="btn btn-small add-to-cart-btn">
+                            Замовити
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+        }
+    </div>
+</div>

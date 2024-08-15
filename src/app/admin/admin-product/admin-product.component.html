@@ -1,0 +1,107 @@
+<div class="container-fluid d-flex flex-column">
+    <button class="btnAddProductForm fw-bold" (click)="toggleOpenForm()">
+        {{ isOpen ? "ОНОВИТИ ПРОДУКТ" : "ДОДАТИ ПРОДУКТ" }}
+    </button>
+    @if(isOpen){
+    <div class="collapse" id="collapseExample" [ngClass]="{ show: isOpen }">
+        <div class="col-12">
+            <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+                <div class="col mb-3 my-3">
+                    <select formControlName="category" name="productCategory" class="form-select" #category>
+                        @for (category of adminCategories; track $index) {
+                        <option [ngValue]="category" selected>{{ category.name }}</option>
+                        }
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <input formControlName="name" name="name" type="text" class="form-control" id="name"
+                            placeholder="*Назва" />
+                    </div>
+                    <div class="col mb-3">
+                        <input formControlName="path" name="path" type="text" class="form-control" id="path"
+                            placeholder="*Шлях" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <textarea formControlName="description" name="description" class="form-control" id="description"
+                        placeholder="*Інгредієнти"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <input formControlName="weight" name="weight" type="text" class="form-control" id="weight"
+                            placeholder="*Вага" />
+                    </div>
+                    <div class="col mb-3">
+                        <input formControlName="price" name="price" type="number" class="form-control" id="price"
+                            placeholder="*Ціна" />
+                    </div>
+                </div>
+                @if(!isUploaded){
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile" (change)="upload($event)" />
+                </div>
+
+                <div class="progress mb-3">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="uploadPercent"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                } @if (isUploaded) {
+                <img [src]="valueByControl('imagePath')" width="100px" class="m-3" alt="" />
+                <Button type="button" class="btn btn-danger" (click)="deleteImage()">delete</Button>
+                }
+
+                <button [disabled]="productForm.invalid" type="submit" class="btn border-0 w-100 btnSaveAdd">
+                    {{ editStatus ? "ЗБЕРЕГТИ" : "ДОДАТИ" }}
+                </button>
+            </form>
+        </div>
+    </div>
+    }
+    <div class="col-12 mt-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col" class="col-2">Категорія</th>
+                    <th scope="col" class="col-4">Назва</th>
+                    <th scope="col" class="col-3">Опис</th>
+                    <th scope="col" class="col-1">Вага</th>
+                    <th scope="col" class="col-1">Ціна</th>
+                    <th scope="col" class="col-2">Картинка</th>
+                    <th scope="col" class="col-1">Дії</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (product of adminProducts; track $index) {
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.category.name }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>
+                        {{ product.description | slice : 0 : 30 }} @if
+                        (product.description.length > 20) { <span>...</span>}
+                    </td>
+                    <td>{{ product.weight }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>
+                        <img [src]="product.imagePath" alt="" height="50px" />
+                    </td>
+                    <td>
+                        <button (click)="editProduct(product)" type="button" class="btn btnEdDel fw-bold"
+                        style="color: primaryColor">
+                            РЕДАГУВАТИ
+                        </button>
+                        <button [disabled]="editStatus" [style.cursor]="editStatus ? 'not-allowed' : 'pointer'"
+                            (click)="deleteProduct(product)" type="button"
+                            class="btn btnEdDel fw-bold">
+                            ВИДАЛИТИ
+                        </button>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

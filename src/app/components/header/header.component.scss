@@ -1,0 +1,234 @@
+@import '../../shared/styles/base';
+@import '../../shared/styles/variables';
+@import '../../shared/styles/mixins';
+@import '../../shared/styles/font';
+@import '../../shared/styles/images';
+
+
+.header-no-blur {
+    backdrop-filter: blur(5px);
+}
+
+.dialog-backdrop-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}
+
+.header-no-blur {
+    z-index: 1060;
+}
+
+
+header {
+    // position: fixed;
+    @include flex(space-between, center);
+    width: 100vw;
+    min-height: 100px;
+    padding: 25px 30px;
+    top: 0;
+    box-shadow: $box-shadow;
+    color: $primary-color;
+    // z-index: 1000;
+    background-color: $secondary-color;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fbackgrounds%2Fpattern.png?alt=media&token=490b0f6d-cce4-4c96-babb-865f848ded56') repeat;
+        background-size: cover;
+        opacity: 0.05;
+        z-index: -1;
+    }
+
+    .logo {
+        &-noa {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .noa-logo:hover {
+
+            transform: scale(1.05);
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+
+
+            li {
+                margin-right: 5px;
+
+                a {
+                    @include responsive-font-size(16px);
+                }
+            }
+        }
+    }
+
+    .actions {
+        gap: 10px;
+        height: 23px;
+
+        a {
+            @include responsive-font-size(16);
+
+        }
+    }
+
+    .checkout {
+        margin-left: 0.5rem;
+        border: none;
+        position: relative;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__favorites {
+            width: 22px;
+            height: 22px;
+            transition: transform 0.35s ease-in-out, background-color .25s ease-in-out, top .25s ease-in-out;
+
+            &:active {
+                transform: translateY(4px);
+            }
+        }
+
+        &__basket {
+            width: 35px;
+            height: 35px;
+        }
+
+        &__count {
+            padding: 0.005rem 0.25rem;
+            @include responsive-font-size(10px);
+            font-size: 10px;
+            position: absolute;
+            bottom: 11px;
+            left: 24px;
+            background-color: $accent-color;
+            color: $secondary-color;
+            border-radius: 50%;
+
+        }
+
+        &__price {
+            margin-left: 0.5rem;
+            @include responsive-font-size(16);
+
+            b {
+                font-weight: bold;
+            }
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .login-register-text {
+            display: inline;
+        }
+
+        .login-register-icon {
+            display: none;
+        }
+
+    }
+
+    @media (max-width: 1400px) {
+        .login-register-text {
+            display: none;
+        }
+
+        .login-register-icon {
+            display: inline-block;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .navbar-nav {
+            flex-direction: column;
+
+        }
+
+        #navbarNav {
+            margin-top: 20px
+        }
+    }
+
+
+    @media (max-width: 980px) {
+        position: relative;
+        width: 100vw;
+        max-height: 300px;
+        padding: 15px 20px;
+
+        .navbar-toggler {
+            margin-left: 40px;
+        }
+
+
+
+        .navbar-nav .nav-item .nav-link,
+        .actions a {
+            @include responsive-font-size(14);
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 15px;
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: center;
+
+            .nav-item {
+                margin-bottom: 10px;
+
+                .nav-link {
+                    @include responsive-font-size(14);
+                }
+            }
+        }
+
+        .actions {
+            margin-top: 10px;
+            gap: 5px;
+
+            a {
+                @include responsive-font-size(14);
+            }
+        }
+
+        .checkout {
+            &__price {
+                @include responsive-font-size(14);
+            }
+
+            &__count {
+                @include responsive-font-size(12);
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 10px;
+
+
+
+        .navbar-nav .nav-item .nav-link,
+        .actions a {
+            @include responsive-font-size(12);
+        }
+    }
+}

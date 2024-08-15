@@ -1,0 +1,105 @@
+@if (isLogin) {
+<form class="form" [formGroup]="authForm">
+
+  <button class="closeForm" mat-icon-button matTooltip="Basic" mat-dialog-close>
+    <mat-icon><span class="material-symbols-outlined">
+        close
+      </span></mat-icon>
+  </button>
+  <h2>Вхід в кабінет</h2>
+
+  <div class="form-group">
+    <mat-form-field appearance="outline" class="custom-form-field" custom-form-field color="primary"
+      style="width: 100%">
+      <mat-label>*Ваш email</mat-label>
+      <input formControlName="email" matInput type="email">
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field appearance="outline" color="primary" style="width: 100%">
+      <mat-label>*Ваш password</mat-label>
+      <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button (click)="loginUser()" class="inCabinet" [disabled]="authForm.invalid"
+    [ngClass]="{'enabled': !authForm.invalid, 'disabled': authForm.invalid}" type="submit" mat-dialog-close>УВІЙТИ В
+    КАБІНЕТ</button>
+
+  <div class="d-flex justify-content-between w-75 pt-2">
+    <a class="open-popup open-link">Забули пароль?</a>
+    <a (click)="isLogin=!isLogin" class="open-register open-link">Зареєструватись</a>
+  </div>
+
+</form>
+}
+
+
+
+@if (!isLogin) {
+<form class="form" [formGroup]="registerForm">
+  <button class="closeForm" mat-icon-button matTooltip="Basic" mat-dialog-close>
+    <mat-icon><span class="material-symbols-outlined">
+        close
+      </span></mat-icon>
+  </button>
+  <h2>Зареєструватись</h2>
+  <div class="form-group">
+
+    <mat-form-field style="width: 48%;" class="me-2" appearance="outline" color="primary">
+      <mat-label>*Ваше ім'я</mat-label>
+      <input matInput type="text" class="inputForm me-1" formControlName="firstName">
+    </mat-form-field>
+
+    <mat-form-field style="width: 48%;" class="mx-1" appearance="outline" color="primary">
+      <mat-label>*Ваше прізвище</mat-label>
+      <input matInput type="text" class="inputForm " formControlName="lastName">
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field style="width: 100%;" appearance="outline" color="primary">
+      <mat-label>*Ваш телефон</mat-label>
+      <input matInput type="tel" class="inputForm" formControlName="phoneNumber">
+    </mat-form-field>
+  </div>
+
+
+  <div class="form-group">
+    <mat-form-field style="width: 100%;" appearance="outline" color="primary">
+      <mat-label>*Email</mat-label>
+      <input matInput type="email" class="inputForm" formControlName="email">
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="form-group-half">
+    <mat-form-field style="width: 100%;" appearance="outline" color="primary">
+      <mat-label>Пароль</mat-label>
+      <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide=!hide">
+        <span class="material-symbols-outlined visibility">
+          visibility
+        </span>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="form-group-half">
+    <mat-form-field style="width: 100%;" appearance="outline" color="primary">
+      <mat-label>Повторіть пароль</mat-label>
+      <input formControlName="passwordRepeat" matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide=!hide">
+        <span class="material-symbols-outlined  visibility">
+          visibility
+        </span></button>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button (click)="registerUser()" [disabled]="registerForm.invalid" type="submit"
+    color="primary">ЗАРЕЄСТРУВАТИСЬ</button>
+  <button mat-button (click)="isLogin=!isLogin">Ви зареєстровані?<span>Увійти</span></button>
+</form>
+}

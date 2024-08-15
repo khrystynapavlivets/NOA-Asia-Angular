@@ -1,0 +1,86 @@
+<div id="background-blur" (click)="closeModal()"></div>
+
+<div class="edit-address-form px-5 mb-0">
+  <button class="closeForm" mat-icon-button matTooltip="Basic" mat-dialog-close>
+    <mat-icon><span class="material-symbols-outlined">
+        close
+      </span></mat-icon>
+  </button>
+  <h1 class="mt-4 mb-4 text-center black-text">Адреса</h1>
+  <form [formGroup]="userAddressForm">
+
+    <mat-form-field class="form-select" appearance="outline" class="col-sm-12 w-100">
+      <mat-label>Виберіть місто</mat-label>
+      <mat-select formControlName="address">
+        <mat-option value="" disabled selected>Виберіть місто</mat-option>
+        <mat-option value="Львів">Львів</mat-option>
+        <mat-option value="Брюховичі">Брюховичі</mat-option>
+        <mat-option value="Великі Грибовичі">Великі Грибовичі</mat-option>
+        <mat-option value="Дубляни">Дубляни</mat-option>
+        <mat-option value="Жирівка">Жирівка</mat-option>
+        <mat-option value="Зимна Вода">Зимна Вода</mat-option>
+        <mat-option value="Зубра">Зубра</mat-option>
+        <mat-option value="Ков'ярі">Ков'ярі</mat-option>
+        <mat-option value="Кротошин">Кротошин</mat-option>
+        <mat-option value="Лапаївка">Лапаївка</mat-option>
+        <mat-option value="Липники">Липники</mat-option>
+        <mat-option value="Малехів">Малехів</mat-option>
+        <mat-option value="Малечковичі">Малечковичі</mat-option>
+        <mat-option value="Малі Грибовичі">Малі Грибовичі</mat-option>
+        <mat-option value="Муроване">Муроване</mat-option>
+        <mat-option value="Наварія">Наварія</mat-option>
+        <mat-option value="Пустомити">Пустомити</mat-option>
+        <mat-option value="Рясне-Руське">Рясне-Руське</mat-option>
+        <mat-option value="Сокільники">Сокільники</mat-option>
+        <mat-option value="Солонка">Солонка</mat-option>
+        <mat-option value="Холодновідка">Холодновідка</mat-option>
+        <mat-option value="Рудно">Рудно</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <div class="row">
+      <mat-form-field class="col-md-7  me-3 custom-input" appearance="outline">
+        <mat-label>Введіть вулицю доставки</mat-label>
+        <input matInput type="text" formControlName="street" required>
+      </mat-form-field>
+      <mat-form-field class="col-md-4 ms-4" appearance="outline">
+        <mat-label>№ будинку</mat-label>
+        <input matInput type="text" formControlName="house" required>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-md-6 me-3" appearance="outline">
+        <mat-label>№ квартири</mat-label>
+        <input matInput type="text" formControlName="flat" required>
+      </mat-form-field>
+      <mat-form-field class="col-md-5 ms-4" appearance="outline">
+        <mat-label>Під'їзд</mat-label>
+        <input matInput type="text" formControlName="entrance" required>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-md-6 me-3" appearance="outline">
+        <mat-label>Поверх</mat-label>
+        <input matInput type="text" formControlName="floor" required>
+      </mat-form-field>
+      <mat-form-field class="col-md-5 ms-4" appearance="outline">
+        <mat-label>Домофон</mat-label>
+        <input matInput type="text" formControlName="intercom">
+      </mat-form-field>
+    </div>
+
+
+    <div class="d-flex justify-content-end">
+      <button mat-button type="submit"  class="btn_submit mb-2" [disabled]="userAddressForm.invalid"
+        (click)="onSave()">Зберегти</button>
+    </div>
+  </form>
+  <div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.7743094996556!2d24.018852015883705!3d49.83312427939788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add24c04f8d85%3A0x6d59b963a6b57fa4!2sLviv%2C%20Lviv%20Oblast%2C%20Ukraine!5e0!3m2!1sen!2s!4v1692097624371!5m2!1sen!2s"
+      width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>

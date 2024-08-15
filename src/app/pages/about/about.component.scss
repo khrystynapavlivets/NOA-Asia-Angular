@@ -1,0 +1,24 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/font";
+@import "../../shared/styles/mixins";
+
+.container {
+    color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  .img-fluid {
+    margin-top: 1rem;
+  }
+  

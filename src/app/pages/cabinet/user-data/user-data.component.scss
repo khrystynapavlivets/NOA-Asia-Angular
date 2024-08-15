@@ -1,0 +1,70 @@
+@import "../../../shared/styles/variables";
+@import "../../../shared/styles/mixins";
+
+
+
+h2 {
+    color: $accent-color;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    .button {
+        border: 3px solid $accent-color;
+        border-radius: 4px;
+        padding: 23px 20px;
+        transition: 0.3s ease-in-out;
+
+        &-add {
+            background-color: $secondary-color;
+            color: $accent-color;
+
+            &:hover {
+                background-color: $accent-color;
+                color: $secondary-color;
+            }
+        }
+
+        &-update {
+            background-color: $accent-color;
+            color: $secondary-color;
+
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+
+        &-exit {
+            @extend .button-update;
+            @extend .button;
+        }
+    }
+
+
+
+}

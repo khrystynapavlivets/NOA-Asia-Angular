@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Cera Round Pro";
+  src: url("../styles/font/CeraRoundPro-Regular_1_2.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Round Pro Bold";
+  src: url("../styles/font/CeraRoundPro-Bold_1_1.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Round Pro Medium";
+  src: url("../styles/font/CeraRoundPro-Medium_1_2.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  font-family: "Cera Round Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 28.8px;
+  }
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 25.6px;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22.4px;
+  }
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 19.2px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+}
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 25.2px;
+  }
+}
+@media (max-width: 992px) {
+  h2 {
+    font-size: 22.4px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 19.6px;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 16.8px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+}
+@media (max-width: 1200px) {
+  h3 {
+    font-size: 21.6px;
+  }
+}
+@media (max-width: 992px) {
+  h3 {
+    font-size: 19.2px;
+  }
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 16.8px;
+  }
+}
+@media (max-width: 576px) {
+  h3 {
+    font-size: 14.4px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+}
+@media (max-width: 1200px) {
+  h4 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  h4 {
+    font-size: 12px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  h5 {
+    font-size: 16.2px;
+  }
+}
+@media (max-width: 992px) {
+  h5 {
+    font-size: 14.4px;
+  }
+}
+@media (max-width: 768px) {
+  h5 {
+    font-size: 12.6px;
+  }
+}
+@media (max-width: 576px) {
+  h5 {
+    font-size: 10.8px;
+  }
+}
+
+h6 {
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  h6 {
+    font-size: 14.4px;
+  }
+}
+@media (max-width: 992px) {
+  h6 {
+    font-size: 12.8px;
+  }
+}
+@media (max-width: 768px) {
+  h6 {
+    font-size: 11.2px;
+  }
+}
+@media (max-width: 576px) {
+  h6 {
+    font-size: 9.6px;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #2d7d7d;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+.container {
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.img-fluid {
+  margin-top: 1rem;
+}/*# sourceMappingURL=about.component.css.map */

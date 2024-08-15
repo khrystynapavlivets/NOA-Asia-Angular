@@ -1,0 +1,26 @@
+.btnAddProductForm {
+  width: 198px;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #2d7d7d;
+}
+.btnAddProductForm:hover {
+  background-color: #2d7d7d;
+}
+
+tr th {
+  border-bottom: 2px solid #2d7d7d;
+}
+
+.btnSaveAdd {
+  outline: 2px solid #2d7d7d;
+  background-color: #2d7d7d;
+}
+
+.btnEdDel {
+  color: #2d7d7d;
+}
+.btnEdDel:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=admin-product.component.css.map */

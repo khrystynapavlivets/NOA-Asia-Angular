@@ -1,0 +1,1 @@
+{"version":3,"sources":["admin-product.component.scss","../../shared/styles/_variables.scss","admin-product.component.css"],"names":[],"mappings":"AAGA;EACI,YAAA;EACA,YAAA;EACA,uBAAA;EACA,kBAAA;EACA,yBCSkB;ACXtB;AFII;EACI,yBCRO;ACMf;;AFMA;EACI,gCCCkB;ACJtB;;AFQA;EACI,0BAAA;EACA,yBCpBW;ACef;;AFOA;EAEG,cCxBY;ACmBf;AFOI;EACI,0BAAA;AELR","file":"admin-product.component.css"}

@@ -1,0 +1,32 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/mixins';
+
+.btnAddCategoryForm {
+    width: 198px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    border: $border-accent-color;
+    &:hover {
+        background-color:$accent-color;
+    }
+}
+
+tr th {
+    border-bottom: $border-accent-color;
+}
+.btnSaveAdd{
+    background-color: $accent-color;
+}
+.btnEdDel
+{
+   color:$accent-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+

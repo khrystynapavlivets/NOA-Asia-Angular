@@ -1,0 +1,192 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/mixins';
+@import '../../shared/styles/font';
+
+
+
+.card {
+    position: relative;
+    background-color: $primary-color;
+    color: $secondary-color;
+    z-index: 1000;
+
+
+    ::before {
+        content: '';
+        position: absolute;
+  
+        z-index: -1;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fbackgrounds%2Fpattern.png?alt=media&token=490b0f6d-cce4-4c96-babb-865f848ded56);
+        background-color: rgba(0, 0, 0, 0.96);
+        background-size: cover;
+        background-repeat: repeat;
+        background-blend-mode: multiply;
+    }
+}
+
+
+.product-row {
+    color: $secondary-color;
+}
+
+.product_image-wrap {
+    width: 100%;
+    height: 190px;
+    cursor: pointer;
+    transition: transform .4s ease-in-out;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        transition: transform .4s ease-in-out;
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+
+    .favorite-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: rgb(239, 239, 241);
+
+
+        .fav-btn,
+        .fav-btn-outline {
+
+            width: 30px;
+            height: 30px;
+            font-size: 28px;
+            color: red;
+            transition: transform 0.35s ease-in-out, background-color .25s ease-in-out, top .25s ease-in-out;
+
+            &:active {
+                transform: translateY(4px);
+            }
+
+        }
+    }
+}
+
+.card-text {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: start;
+    font-size: 15px;
+    line-height: 1.5em;
+    position: relative;
+    height: 51px;
+    @include responsive-font-size(14px);
+
+    .product_size {
+        position: absolute;
+
+    }
+}
+
+.thumb-input-number {
+    display: inline-flex;
+    align-items: center;
+
+    .product-qty {
+        width: 40px;
+        height: 32px;
+        text-align: center;
+        border: none;
+        background-color: $primary-color;
+        color: $secondary-color;
+        @include responsive-font-size(20px);
+    }
+
+    .decrement,
+    .increment {
+        width: 32px;
+        margin: 2px;
+        font-size: 30px;
+        background: none;
+        transition: 0.35s;
+        @include responsive-font-size(24px);
+        line-height: 24px;
+        color: $secondary-color;
+        padding: 4px 8px;
+        margin: 4px;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        position: relative;
+        transition: transform 0.35s ease-in-out, background-color .25s ease-in-out, top .25s ease-in-out;
+
+        &:hover {
+            background-color: $accent-color;
+        }
+
+        &:active {
+            transform: translateY(4px);
+        }
+    }
+}
+
+.add-to-cart-btn {
+    width: 130px;
+    height: 45px;
+    background-color: $accent-color;
+    color: $secondary-color;
+    @include responsive-font-size(14px);
+    transition: 0.3s;
+    text-transform: uppercase;
+
+    &:hover {
+        border: 2px solid $accent-color;
+        color: $accent-color;
+        background-color: $primary-color;
+    }
+}
+
+.product_price {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.product_title {
+    width: 80%;
+    height: 50px;
+    margin: -20px 0 0 0;
+    @include responsive-font-size(20px);
+    cursor: pointer;
+    font-family: 'Cera Round Pro Bold', sans-serif;
+    line-height: 28.6px
+}
+
+.route-active {
+    background-color: $accent-color;
+    border-top: 1px solid $accent-color;
+    border-radius: 6px;
+}
+
+.categories-menu {
+    padding: 10px;
+    border: 1px solid $accent-color;
+    border-radius: 6px;
+    width: 74vw;
+
+    .nav-item {
+        padding: 5px;
+        background-color: $primary-color;
+        cursor: pointer;
+        transition: 0.25s;
+
+        .nav-link {
+            color: $secondary-color;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $accent-color;
+            }
+        }
+    }
+}

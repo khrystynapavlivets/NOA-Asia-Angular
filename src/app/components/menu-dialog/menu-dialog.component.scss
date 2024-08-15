@@ -1,0 +1,79 @@
+@import '../../shared/styles/base';
+@import '../../shared/styles/font';
+@import '../../shared/styles/mixins';
+@import '../../shared/styles/variables';
+
+
+
+.menu-dialog-container {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $primary-color;
+    padding: 20px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    margin: 5px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #2d2c2c;
+    }
+}
+
+.menu-item img {
+    width: 180px;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.menu-item-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: $secondary-color;
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu-item img {
+        width: 130px;
+        height: 110px;
+    }
+
+    .menu-item {
+        margin: 5px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .menu-item img {
+        width: 190px;
+        height: 60px;
+    }
+
+    .menu-item-title {
+        font-size: 0.8em;
+    }
+}

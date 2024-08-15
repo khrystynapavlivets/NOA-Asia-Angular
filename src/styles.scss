@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/shared/styles/theme-material';
+@import "./app/shared/styles/mixins";
+@import "./app/shared/styles/base";
+@import "./app/shared/styles/variables";
+@import "./app/shared/styles/font";
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@import 'ngx-toastr/toastr'

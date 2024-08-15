@@ -1,0 +1,472 @@
+*, *::before, *::after {
+  box-sizing: border-box; /* Set the sizing of an element to include it's border */
+}
+
+* {
+  margin: 0; /* Set the default margin to 0 */
+  padding: 0; /* Set the default padding to 0 */
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none; /* Turn off numbered and unordered list decoration */
+}
+
+html:focus-within {
+  scroll-behavior: smooth; /* Make the scrolling inside of any scrollable element smooth */
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto; /* Makes link undelines look better */
+}
+
+img, picture, svg, video, canvas {
+  max-width: 100%; /* Makes it responsive */
+  height: auto; /* Makes it responsive */
+  vertical-align: middle; /* Makes text next to inline images look better */
+  font-style: italic; /* If the images don't load it makes the alt decription look better */
+  background-repeat: no-repeat;
+  /* The background repeat and size are there if you want to load a picture first like a backroung image that is worse quality while the better quality image loads */
+  background-size: cover;
+}
+
+input, button, textarea, select {
+  font: inherit; /* Makes these elements inherit fonts */
+}
+
+/* Turns off animation for people who don't want to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+body, html {
+  height: 100%; /* Makes the body element full screen */
+  scroll-behavior: smooth; /* Makes normal scrolling smooth */
+}
+
+@font-face {
+  font-family: "Cera Round Pro";
+  src: url("../styles/font/CeraRoundPro-Regular_1_2.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Round Pro Bold";
+  src: url("../styles/font/CeraRoundPro-Bold_1_1.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cera Round Pro Medium";
+  src: url("../styles/font/CeraRoundPro-Medium_1_2.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  font-family: "Cera Round Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 28.8px;
+  }
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 25.6px;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22.4px;
+  }
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 19.2px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+}
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 25.2px;
+  }
+}
+@media (max-width: 992px) {
+  h2 {
+    font-size: 22.4px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 19.6px;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 16.8px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+}
+@media (max-width: 1200px) {
+  h3 {
+    font-size: 21.6px;
+  }
+}
+@media (max-width: 992px) {
+  h3 {
+    font-size: 19.2px;
+  }
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 16.8px;
+  }
+}
+@media (max-width: 576px) {
+  h3 {
+    font-size: 14.4px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+}
+@media (max-width: 1200px) {
+  h4 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  h4 {
+    font-size: 12px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  h5 {
+    font-size: 16.2px;
+  }
+}
+@media (max-width: 992px) {
+  h5 {
+    font-size: 14.4px;
+  }
+}
+@media (max-width: 768px) {
+  h5 {
+    font-size: 12.6px;
+  }
+}
+@media (max-width: 576px) {
+  h5 {
+    font-size: 10.8px;
+  }
+}
+
+h6 {
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  h6 {
+    font-size: 14.4px;
+  }
+}
+@media (max-width: 992px) {
+  h6 {
+    font-size: 12.8px;
+  }
+}
+@media (max-width: 768px) {
+  h6 {
+    font-size: 11.2px;
+  }
+}
+@media (max-width: 576px) {
+  h6 {
+    font-size: 9.6px;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #2d7d7d;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+footer {
+  position: relative;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100vw;
+  padding: 60px 10px;
+  color: #000;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
+}
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fbackgrounds%2Fpattern.png?alt=media&token=490b0f6d-cce4-4c96-babb-865f848ded56") repeat;
+  background-size: cover;
+  opacity: 0.05;
+  z-index: -1;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+footer .footer-content p {
+  margin: 0 15px;
+  font-size: 16;
+}
+@media (max-width: 1200px) {
+  footer .footer-content p {
+    font-size: 14.4;
+  }
+}
+@media (max-width: 992px) {
+  footer .footer-content p {
+    font-size: 12.8;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-content p {
+    font-size: 11.2;
+  }
+}
+@media (max-width: 576px) {
+  footer .footer-content p {
+    font-size: 9.6;
+  }
+}
+footer .footer-content a {
+  font-size: 16;
+}
+@media (max-width: 1200px) {
+  footer .footer-content a {
+    font-size: 14.4;
+  }
+}
+@media (max-width: 992px) {
+  footer .footer-content a {
+    font-size: 12.8;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-content a {
+    font-size: 11.2;
+  }
+}
+@media (max-width: 576px) {
+  footer .footer-content a {
+    font-size: 9.6;
+  }
+}
+footer .footer-content .payment-icons,
+footer .footer-content .social-icons {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer-content .payment-icons img,
+footer .footer-content .social-icons img {
+  width: 24px;
+  height: 24px;
+}
+footer .footer-content span {
+  font-weight: bold;
+}
+@media (max-width: 1024px) {
+  footer .footer-content {
+    padding: 20px;
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    align-items: flex-start;
+  }
+  footer .footer-content p, footer .footer-content a {
+    font-size: 14;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 1200px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 12.6;
+  }
+}
+@media (max-width: 1024px) and (max-width: 992px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 11.2;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 9.8;
+  }
+}
+@media (max-width: 1024px) and (max-width: 576px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 8.4;
+  }
+}
+@media (max-width: 1024px) {
+  footer .footer-content .payment-icons,
+  footer .footer-content .social-icons {
+    justify-content: flex-start;
+  }
+  footer .footer-content .payment-icons img,
+  footer .footer-content .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-content {
+    padding: 15px;
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    align-items: center;
+  }
+  footer .footer-content p, footer .footer-content a {
+    font-size: 14;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 768px) and (max-width: 1200px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 12.6;
+  }
+}
+@media (max-width: 768px) and (max-width: 992px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 11.2;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 9.8;
+  }
+}
+@media (max-width: 768px) and (max-width: 576px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 8.4;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-content .payment-icons,
+  footer .footer-content .social-icons {
+    justify-content: center;
+  }
+  footer .footer-content .payment-icons img,
+  footer .footer-content .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 480px) {
+  footer .footer-content {
+    padding: 10px;
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    align-items: center;
+  }
+  footer .footer-content p, footer .footer-content a {
+    font-size: 12;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 480px) and (max-width: 1200px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 10.8;
+  }
+}
+@media (max-width: 480px) and (max-width: 992px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 9.6;
+  }
+}
+@media (max-width: 480px) and (max-width: 768px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 8.4;
+  }
+}
+@media (max-width: 480px) and (max-width: 576px) {
+  footer .footer-content p, footer .footer-content a {
+    font-size: 7.2;
+  }
+}
+@media (max-width: 480px) {
+  footer .footer-content .payment-icons,
+  footer .footer-content .social-icons {
+    justify-content: center;
+    gap: 5px;
+  }
+  footer .footer-content .payment-icons img,
+  footer .footer-content .social-icons img {
+    width: 18px;
+    height: 18px;
+  }
+}/*# sourceMappingURL=footer.component.css.map */

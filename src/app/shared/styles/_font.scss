@@ -1,0 +1,92 @@
+@import 'variables';
+@import 'mixins';
+
+@font-face {
+    font-family: 'Cera Round Pro';
+    src: url('../styles/font/CeraRoundPro-Regular_1_2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Round Pro Bold';
+    src: url('../styles/font/CeraRoundPro-Bold_1_1.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Round Pro Medium';
+    src: url('../styles/font/CeraRoundPro-Medium_1_2.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/noa-project-59103.appspot.com/o/images%2Fbackgrounds%2Fpattern.png?alt=media&token=490b0f6d-cce4-4c96-babb-865f848ded56);
+    background-color: rgba(0, 0, 0, 0.96);
+    background-size: cover;
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    color: $secondary-color;
+    z-index: 1;
+}
+
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 $spacing-unit 0;
+}
+
+h1 {
+    @include responsive-font-size(32px);
+}
+
+h2 {
+    @include responsive-font-size(28px);
+}
+
+h3 {
+    @include responsive-font-size(24px);
+}
+
+h4 {
+    @include responsive-font-size(20px);
+}
+
+h5 {
+    @include responsive-font-size(18px);
+}
+
+h6 {
+    @include responsive-font-size(16px);
+}
+
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+
+p {
+    margin: 0 0 $spacing-unit 0;
+}
